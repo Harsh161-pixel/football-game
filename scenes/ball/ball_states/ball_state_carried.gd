@@ -15,7 +15,6 @@ func _process(delta: float) -> void:
 	var vx := 0.0
 	dribble_time += delta
 
-
 	if carrier.velocity != Vector2.ZERO:
 		if carrier.velocity.x != 0:
 			vx = cos(DRIBBLE_FREQUENCY * dribble_time) * DRIBBLE_INTENSITY
