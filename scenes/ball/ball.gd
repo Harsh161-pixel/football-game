@@ -13,13 +13,14 @@ enum State {CARRIED, FREEFORM, SHOT}
 var carrier : Player = null
 var current_state : BallState = null
 var height := 0.0
+var height_velocity := 0.0
 var state_factory := BallStateFactory.new()
 var velocity := Vector2.ZERO
 
 func _ready() -> void:
 	switch_state(State.FREEFORM)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	ball_sprite.position = Vector2.UP * height
 
 func switch_state(state: Ball.State) -> void:
